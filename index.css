@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Coffee-inspired Luxury Palette colors */
+  --color-coffee-ivory: #F6F1EA;
+  --color-coffee-beige: #E8DDD1;
+  --color-coffee-oak: #C7A88A;
+  --color-coffee-brown: #8B5E3C;
+  --color-coffee-caramel: #D4A373;
+  --color-coffee-espresso: #130D0A;
+  --color-coffee-roast: #1C1410;
+  --color-coffee-cream: #FFFDFB;
+  --color-coffee-mocha: #251A14;
+}
+
+/* Base modifications and custom scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F6F1EA;
+  color: #2C1A0F;
+}
+
+.dark body {
+  background-color: #130D0A;
+  color: #F6F1EA;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7A88A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B5E3C;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #8B5E3C;
+  border: 2px solid #130D0A;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #D4A373;
+}
+
+/* Retro grid backdrop pattern for bento blocks */
+.bg-grid-pattern {
+  background-image: radial-gradient(#C7A88A 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: radial-gradient(#8B5E3C 1px, transparent 1px);
+}
+
+/* Gradient background and visual animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
